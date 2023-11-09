@@ -15,7 +15,9 @@ class _CuentanosState extends State<Cuentanos> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: backgroundImageDark(bodyWidget(), context),
+      body: Container(
+            decoration: imgDecoration,
+          child:bodyWidget()),
     );
   }
 

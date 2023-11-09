@@ -16,7 +16,14 @@ backgroundImage(child,BuildContext context){
     child: child,
   );
 }
-
+BoxDecoration imgDecoration =const BoxDecoration(
+color: Colors.black,
+image: DecorationImage(
+image: AssetImage('assets/images/background.png'),
+fit: BoxFit.cover,
+//   colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.9), BlendMode.dstATop),
+)
+);
 
 backgroundImageDark(child,BuildContext context){
   return Container(
