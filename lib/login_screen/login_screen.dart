@@ -21,18 +21,24 @@ class _LoginScreenState extends State<LoginScreen> {
   bodyWidget(){
     return Container(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            const SizedBox(height: 20,),
-            fieldsContainer(),
-            const SizedBox(height: 30,),
-            Image.asset("assets/images/o_divider.png"),
-            const SizedBox(height: 30,),
-            otherLoginOptions(),
-            const Spacer(),
-            bottomText(),
-            const SizedBox(height: 10,),
-          ],
+        child: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: [
+                const SizedBox(height: 20,),
+                fieldsContainer(),
+                const SizedBox(height: 30,),
+                Image.asset("assets/images/o_divider.png"),
+                const SizedBox(height: 30,),
+                otherLoginOptions(),
+                const Spacer(),
+                bottomText(),
+                const SizedBox(height: 50,),
+              ],
+            ),
+          ),
         ));
   }
 

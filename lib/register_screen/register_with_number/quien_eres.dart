@@ -24,14 +24,17 @@ class _QuienEresState extends State<QuienEres> {
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
-          child: Column(
-            children: [
-              const SizedBox(height: 20,),
-              fieldsContainer(),
-              const Spacer(),
-              bottomText(),
-              const SizedBox(height: 10,),
-            ],
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: [
+                const SizedBox(height: 20,),
+                fieldsContainer(),
+                const Spacer(),
+                bottomText(),
+                const SizedBox(height: 50,),
+              ],
+            ),
           ),
         ));
   }
