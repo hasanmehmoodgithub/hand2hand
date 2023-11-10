@@ -60,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           onPressed: (){
-            context.push(AppScreen.loginScreen);
+            context.push("/${AppScreen.loginScreen}");
 
           }, child: const Text("Iniciar sesión")),
     );
@@ -80,7 +80,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           onPressed: (){
-            context.push(AppScreen.dashboardScreen);
+            context.push("/${AppScreen.dashboardScreen}");
+
           }, child: const Text("Crea cuenta")),
     );
   }
