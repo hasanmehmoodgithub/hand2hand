@@ -15,12 +15,16 @@ class _QuienEresScreenState extends State<QuienEresScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: backgroundImageDark(bodyWidget(), context),
+      body:Container(
+        height: double.infinity,
+          decoration: imgDecoration,
+          child: bodyWidget())
     );
   }
 
-  bodyWidget(){
+  Widget bodyWidget(){
     return Container(
+
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
@@ -28,7 +32,7 @@ class _QuienEresScreenState extends State<QuienEresScreen> {
             children: [
               const SizedBox(height: 20,),
               fieldsContainer(),
-              const Spacer(),
+
               bottomText(),
               const SizedBox(height: 10,),
             ],

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hand2hand/bottom_bar_screen/bascador_screen.dart';
 import 'package:hand2hand/bottom_bar_screen/home_screen.dart';
 import 'package:hand2hand/login_screen/login_screen.dart';
 import 'package:hand2hand/splash_screen/splash_screen.dart';
 
 import '../generated/assets.dart';
+import 'mi_perfil.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -29,8 +31,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
             children:   [
               HomeScreen(),
               LoginScreen(),
-              SplashScreen(),
-              Text("4"),
+              MiPerfil(),
+              BasCaDorScreen(),
               Text("5"),
 
             ]),

@@ -60,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           onPressed: (){
-            context.push("/${AppScreen.registerWithNumberScreen}");
+            context.push("/${AppScreen.dashboardScreen}");
 
           }, child: const Text("Iniciar sesión")),
     );

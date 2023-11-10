@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen>{
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Search',
+                          hintText: 'Que estas buscando',
                         ),
                       ),
                     ),
