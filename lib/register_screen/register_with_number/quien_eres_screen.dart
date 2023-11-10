@@ -1,51 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:hand2hand/Components/AppComponents.dart';
 
+import '../../Components/AppComponents.dart';
 import '../../Src/AppColors.dart';
 import '../../Src/AppTextStyle.dart';
 
-class Cuentanos extends StatefulWidget {
-  const Cuentanos({super.key});
+class QuienEresScreen extends StatefulWidget {
+  const QuienEresScreen({super.key});
 
   @override
-  State<Cuentanos> createState() => _CuentanosState();
+  State<QuienEresScreen> createState() => _QuienEresScreenState();
 }
 
-class _CuentanosState extends State<Cuentanos> {
+class _QuienEresScreenState extends State<QuienEresScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-            decoration: imgDecoration,
-          child:bodyWidget()),
+    return  Scaffold(
+      body: backgroundImageDark(bodyWidget(), context),
     );
   }
-
 
   bodyWidget(){
     return Container(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            const SizedBox(height: 20,),
-            fieldsContainer(),
-            const Spacer(),
-            bottomText(),
-            const SizedBox(height: 10,),
-          ],
+        child: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+          child: Column(
+            children: [
+              const SizedBox(height: 20,),
+              fieldsContainer(),
+              const Spacer(),
+              bottomText(),
+              const SizedBox(height: 10,),
+            ],
+          ),
         ));
   }
 
   fieldsContainer(){
     return Container(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(20),
       padding: const EdgeInsets.all(20),
-
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(40),
+      ),
       child: Column(
         children: [
-          const Text("Cuentanos sobre ti",style: TextStyle(fontSize: 30,fontFamily: nunitoBold),textAlign: TextAlign.center,),
-          const SizedBox(height: 10,),
-          const Text("Queremos personalizarte tu experienza, hablanos de ti",style: TextStyle(fontSize: 14,fontFamily: nunitoBold),textAlign: TextAlign.center,),
+          const Text("¿Quien eres?",style: TextStyle(fontSize: 30,fontFamily: nunitoBold),textAlign: TextAlign.center,),
           const SizedBox(height: 30,),
           textFieldsWidget(),
           const SizedBox(height: 40,),
@@ -62,14 +63,16 @@ class _CuentanosState extends State<Cuentanos> {
     return Column(
       children: [
         numberTextField(),
-        SizedBox(height: 30,),
+        const SizedBox(height: 30,),
         apellidosTextField(),
-        SizedBox(height:30,),
-        fechaTextField(),
-        SizedBox(height:30,),
-        sexoTextField(),
-        SizedBox(height:30,),
-        idiomasTextField()
+        const SizedBox(height:30,),
+        Row(
+          children: [
+            fechaTextField(),
+            const Spacer(),
+            sexoTextField(),
+          ],
+        )
       ],
     );
 
@@ -99,7 +102,7 @@ class _CuentanosState extends State<Cuentanos> {
             ),
             filled: true,
             hintStyle: TextStyle(color: Colors.grey[600]),
-            hintText: "¿Donde estudias?",
+            hintText: "Nombre",
             fillColor: textFieldColor,
             isDense: true,                      // Added this
 
@@ -124,7 +127,7 @@ class _CuentanosState extends State<Cuentanos> {
             ),
             filled: true,
             hintStyle: TextStyle(color: Colors.grey[600]),
-            hintText: "¿Qué estás estudiando?",
+            hintText: "Apellidos",
             fillColor: textFieldColor,
             isDense: true,                      // Added this
 
@@ -136,6 +139,7 @@ class _CuentanosState extends State<Cuentanos> {
 
   fechaTextField(){
     return SizedBox(
+      width: MediaQuery.of(context).size.width/2.3,
       height: 50,
       child: Center(
         child: TextField(
@@ -149,7 +153,7 @@ class _CuentanosState extends State<Cuentanos> {
             ),
             filled: true,
             hintStyle: TextStyle(color: Colors.grey[600]),
-            hintText: "¿En qué curso estás?",
+            hintText: "Fecha de nacimiento",
             fillColor: textFieldColor,
             isDense: true,                      // Added this
 
@@ -161,6 +165,7 @@ class _CuentanosState extends State<Cuentanos> {
 
   sexoTextField(){
     return SizedBox(
+      width: MediaQuery.of(context).size.width/5,
       height: 50,
       child: Center(
         child: TextField(
@@ -174,33 +179,7 @@ class _CuentanosState extends State<Cuentanos> {
             ),
             filled: true,
             hintStyle: TextStyle(color: Colors.grey[600]),
-            hintText: "¿Has realizado estudios anteriormente?",
-            fillColor: textFieldColor,
-            isDense: true,                      // Added this
-
-          ),
-        ),
-      ),
-    );
-  }
-
-
-  idiomasTextField(){
-    return SizedBox(
-      height: 50,
-      child: Center(
-        child: TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30.0),
-              borderSide: const BorderSide(
-                width: 0,
-                style: BorderStyle.none,
-              ),
-            ),
-            filled: true,
-            hintStyle: TextStyle(color: Colors.grey[600]),
-            hintText: "¿Qué idiomas hablas?",
+            hintText: "sexo",
             fillColor: textFieldColor,
             isDense: true,                      // Added this
 
@@ -242,5 +221,4 @@ class _CuentanosState extends State<Cuentanos> {
       ],
     );
   }
-
 }

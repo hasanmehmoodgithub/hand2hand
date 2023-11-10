@@ -4,14 +4,14 @@ import '../../Components/AppComponents.dart';
 import '../../Src/AppColors.dart';
 import '../../Src/AppTextStyle.dart';
 
-class RegisterWithNumber extends StatefulWidget {
-  const RegisterWithNumber({super.key});
+class RegisterWithNumberScreen extends StatefulWidget {
+  const RegisterWithNumberScreen({super.key});
 
   @override
-  State<RegisterWithNumber> createState() => _RegisterWithNumberState();
+  State<RegisterWithNumberScreen> createState() => _RegisterWithNumberScreenState();
 }
 
-class _RegisterWithNumberState extends State<RegisterWithNumber> {
+class _RegisterWithNumberScreenState extends State<RegisterWithNumberScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
