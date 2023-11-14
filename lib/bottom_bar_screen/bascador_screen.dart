@@ -9,7 +9,7 @@ class BasCaDorScreen extends StatefulWidget {
 }
 
 class _BasCaDorScreenState extends State<BasCaDorScreen> {
-  Color g=Color(0xffD9D9D9);
+  Color g=const Color(0xffD9D9D9);
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: Container(
@@ -17,7 +17,7 @@ class _BasCaDorScreenState extends State<BasCaDorScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -27,7 +27,7 @@ class _BasCaDorScreenState extends State<BasCaDorScreen> {
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.8),
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                        borderRadius: const BorderRadius.all(Radius.circular(20))),
 
                     child: Row(
                       children: [
@@ -49,21 +49,21 @@ class _BasCaDorScreenState extends State<BasCaDorScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
-                Text("Cancelar ",style: TextStyle(color: Colors.white),)
+                const SizedBox(width: 10,),
+                const Text("Cancelar ",style: TextStyle(color: Colors.white),)
               ],
             ),
           ),
 
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           SizedBox(
             height: 100.0,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 5,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
+                return const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: CircleAvatar(
                     backgroundImage: NetworkImage('https://picsum.photos/200/300'), // Replace with actual image paths
                     radius: 50.0,
@@ -72,8 +72,8 @@ class _BasCaDorScreenState extends State<BasCaDorScreen> {
               },
             ),
           ),
-          SizedBox(height: 30,),
-          Container(
+          const SizedBox(height: 30,),
+          SizedBox(
             height: 130.0,
 
             child: ListView.builder(
@@ -83,17 +83,17 @@ class _BasCaDorScreenState extends State<BasCaDorScreen> {
                 return Container(
                   decoration: BoxDecoration(
                       color: g,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius: const BorderRadius.all(Radius.circular(20))),
                   width: 80.0,
                   height: 120,
-                  margin: EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
                   // Replace with your content
                 );
               },
             ),
           ),
-          SizedBox(height: 30,),
-          Center(
+          const SizedBox(height: 30,),
+          const Center(
             child: Text(
               'Temas',
               style: TextStyle(
@@ -103,10 +103,10 @@ class _BasCaDorScreenState extends State<BasCaDorScreen> {
               ),
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Expanded(
             child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 174 / 74, // Adjust as needed
               ),
@@ -115,11 +115,11 @@ class _BasCaDorScreenState extends State<BasCaDorScreen> {
                 return Container(
                   decoration: BoxDecoration(
                       color: g,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius: const BorderRadius.all(Radius.circular(20))),
                   width: 174.0,
                   height: 74.0,
            
-                  margin: EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
                   // Replace with your content
                 );
               },

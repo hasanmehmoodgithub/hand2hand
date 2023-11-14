@@ -14,13 +14,13 @@ class _MiPerfilState extends State<MiPerfil> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: imgDecoration,
         child: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Row(children: [
+          const Row(children: [
             Icon(
               Icons.lock,
               color: Colors.white,
@@ -37,16 +37,16 @@ class _MiPerfilState extends State<MiPerfil> {
               size: 35,
             ),
           ]),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Container(
+          SizedBox(
             height: 180,
             child: Column(
               children: [
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     ClipOval(
@@ -55,7 +55,7 @@ class _MiPerfilState extends State<MiPerfil> {
                         width: 100,
                         color:
                             Colors.blue, // You can replace this with your image
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Your Image',
                             style: TextStyle(color: Colors.white),
@@ -63,8 +63,8 @@ class _MiPerfilState extends State<MiPerfil> {
                         ),
                       ),
                     ),
-                    Spacer(),
-                    Column(
+                    const Spacer(),
+                    const Column(
                       children: [
                         Text(
                           "1º",
@@ -76,8 +76,8 @@ class _MiPerfilState extends State<MiPerfil> {
                         ),
                       ],
                     ),
-                    Spacer(),
-                    Column(
+                    const Spacer(),
+                    const Column(
                       children: [
                         Text(
                           "25",
@@ -92,15 +92,15 @@ class _MiPerfilState extends State<MiPerfil> {
                     Spacer(),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
-                    Column(
+                    const Column(
                       children: [
                         Text(
                           "Javier Álvarez ",
@@ -112,16 +112,16 @@ class _MiPerfilState extends State<MiPerfil> {
                         ),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       height: 40,
                       width: 150,
                       decoration: BoxDecoration(
-                          color: Color(0xffD9D9D9).withOpacity(0.8),
-                          borderRadius: BorderRadius.all(Radius.circular(30))),
-                      child: Center(child: Text("Editar")),
+                          color: const Color(0xffD9D9D9).withOpacity(0.8),
+                          borderRadius: const BorderRadius.all(Radius.circular(30))),
+                      child: const Center(child: Text("Editar")),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                   ],
@@ -129,31 +129,31 @@ class _MiPerfilState extends State<MiPerfil> {
               ],
             ),
           ),
-           SizedBox(height:40,),
+           const SizedBox(height:40,),
            Row(children: [
-             SizedBox(width: 10,),
+             const SizedBox(width: 10,),
              Column(children: [
 
                Container(
                  decoration: BoxDecoration(
-                   color: Color(0xffD9D9D9).withOpacity(0.8),
-                     borderRadius: BorderRadius.all(Radius.circular(20))),
+                   color: const Color(0xffD9D9D9).withOpacity(0.8),
+                     borderRadius: const BorderRadius.all(Radius.circular(20))),
                  height: 150,width: 155,),
-               SizedBox(height: 4,),
-               Text("Guardados",style: TextStyle(fontSize: 20,color: Colors.white),)
+               const SizedBox(height: 4,),
+               const Text("Guardados",style: TextStyle(fontSize: 20,color: Colors.white),)
              ],),
-             Spacer(),
+             const Spacer(),
              Column(children: [
 
                Container(
                  decoration: BoxDecoration(
-                     color: Color(0xffD9D9D9).withOpacity(0.8),
-                     borderRadius: BorderRadius.all(Radius.circular(20))),
+                     color: const Color(0xffD9D9D9).withOpacity(0.8),
+                     borderRadius: const BorderRadius.all(Radius.circular(20))),
                  height: 150,width: 155,),
-               SizedBox(height: 4,),
-               Text("Retos",style: TextStyle(fontSize: 20,color: Colors.white),)
+               const SizedBox(height: 4,),
+               const Text("Retos",style: TextStyle(fontSize: 20,color: Colors.white),)
              ],),
-             SizedBox(width: 10,),
+             const SizedBox(width: 10,),
            ],)
 
         ]),

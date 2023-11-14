@@ -65,13 +65,13 @@ class _CreaUnNombreScreenState extends State<CreaUnNombreScreen> {
     return Column(
       children: [
         numberTextField(),
-        SizedBox(height: 30,),
+        const SizedBox(height: 30,),
         apellidosTextField(),
-        SizedBox(height:30,),
+        const SizedBox(height:30,),
         fechaTextField(),
-        SizedBox(height:30,),
+        const SizedBox(height:30,),
         sexoTextField(),
-        SizedBox(height:30,),
+        const SizedBox(height:30,),
         idiomasTextField()
       ],
     );

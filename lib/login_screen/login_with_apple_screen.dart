@@ -209,7 +209,7 @@ class _LoginWithAppleScreenState extends State<LoginWithAppleScreen> {
                    const Spacer(),
                    Container(
 
-                       padding: EdgeInsets.all(2),
+                       padding: const EdgeInsets.all(2),
                        decoration: BoxDecoration(
                            borderRadius: BorderRadius.circular(20),
                            border: Border.all(
@@ -217,7 +217,7 @@ class _LoginWithAppleScreenState extends State<LoginWithAppleScreen> {
                                width: 1.5
                            )
                        ),
-                       child: Container(
+                       child: const SizedBox(
                          height: 15,
                          width: 15,
                        )

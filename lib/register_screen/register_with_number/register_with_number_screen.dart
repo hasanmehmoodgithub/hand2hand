@@ -109,13 +109,13 @@ class _RegisterWithNumberScreenState extends State<RegisterWithNumberScreen> {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("¿Ya tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
+        const Text("¿Ya tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
         InkWell(
             onTap: (){
               context.push("/${AppScreen.loginScreen}");
 
             },
-            child: Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
+            child: const Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
 
 
       ],

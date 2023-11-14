@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hand2hand/bottom_bar_screen/bascador_screen.dart';
 import 'package:hand2hand/bottom_bar_screen/home_screen.dart';
+import 'package:hand2hand/bottom_bar_screen/ranking_screen.dart';
 import 'package:hand2hand/login_screen/login_screen.dart';
 import 'package:hand2hand/splash_screen/splash_screen.dart';
 
@@ -30,10 +31,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
             controller: pageViewController,
             children:   [
               HomeScreen(),
-              LoginScreen(),
-              MiPerfil(),
-              BasCaDorScreen(),
-              Text("5"),
+              HomeScreen(),
+              const BasCaDorScreen(),
+              const RankingScreen(),
+              const MiPerfil(),
 
             ]),
 
@@ -48,7 +49,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     return Container(
       height: 70,
-      color: Color(0xFF72AFA6),
+      color: const Color(0xFF72AFA6),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceAround,

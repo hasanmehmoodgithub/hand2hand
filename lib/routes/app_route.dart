@@ -24,21 +24,21 @@ class AppRoutes {
             name: AppScreen.splashScreen,
             path: "/",
             builder: (BuildContext context, GoRouterState state) {
-              return  SplashScreen();
+              return  const SplashScreen();
             }),
 
         GoRoute(
             name: AppScreen.loginScreen,
             path: "/${AppScreen.loginScreen}",
             builder: (BuildContext context, GoRouterState state) {
-              return  LoginScreen();
+              return  const LoginScreen();
             }),
 
         GoRoute(
             name: AppScreen.loginWithAppleScreen,
             path: "/${AppScreen.loginWithAppleScreen}",
             builder: (BuildContext context, GoRouterState state) {
-              return  LoginWithAppleScreen();
+              return  const LoginWithAppleScreen();
             }),
 
 
@@ -46,37 +46,37 @@ class AppRoutes {
             name: AppScreen.dashboardScreen,
             path: "/${AppScreen.dashboardScreen}",
             builder: (BuildContext context, GoRouterState state) {
-              return  DashboardScreen();
+              return  const DashboardScreen();
             }),
         GoRoute(
             name: AppScreen.confirmForgetPassword,
             path: "/${AppScreen.confirmForgetPassword}",
             builder: (BuildContext context, GoRouterState state) {
-              return  ConfirmPasswordScreen();
+              return  const ConfirmPasswordScreen();
             }),
         GoRoute(
             name: AppScreen.forgetPassword,
             path: "/${AppScreen.forgetPassword}",
             builder: (BuildContext context, GoRouterState state) {
-              return  ForgetPasswordScreen();
+              return  const ForgetPasswordScreen();
             }),
         GoRoute(
             name: AppScreen.creaUnNombreScreen,
             path: "/${AppScreen.creaUnNombreScreen}",
             builder: (BuildContext context, GoRouterState state) {
-              return  CreaUnNombreScreen();
+              return  const CreaUnNombreScreen();
             }),
         GoRoute(
             name: AppScreen.quienEresScreen,
             path: "/${AppScreen.quienEresScreen}",
             builder: (BuildContext context, GoRouterState state) {
-              return  QuienEresScreen();
+              return  const QuienEresScreen();
             }),
         GoRoute(
             name: AppScreen.registerWithNumberScreen,
             path: "/${AppScreen.registerWithNumberScreen}",
             builder: (BuildContext context, GoRouterState state) {
-              return  RegisterWithNumberScreen();
+              return  const RegisterWithNumberScreen();
             }),
 
       ]);

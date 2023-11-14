@@ -200,13 +200,13 @@ class _ConfirmPasswordScreenState extends State<ConfirmPasswordScreen> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("¿No tienes cuenta?", style: TextStyle(
+        const Text("¿No tienes cuenta?", style: TextStyle(
             fontSize: 14, fontFamily: nunitoBold, color: Colors.white),),
         InkWell(
             onTap: (){
               context.push("/${AppScreen.registerWithNumberScreen}");
             },
-            child: Text(" Registrate",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
+            child: const Text(" Registrate",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
 
 
 

@@ -3,8 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:hand2hand/Components/AppComponents.dart';
 import 'package:hand2hand/routes/app_screen.dart';
 
-import '../Src/AppTextStyle.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
