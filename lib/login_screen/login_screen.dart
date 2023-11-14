@@ -17,6 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      resizeToAvoidBottomInset: false,   //new line
       body: backgroundImageDark(bodyWidget(), context),
     );
   }
@@ -48,6 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
         borderRadius: BorderRadius.circular(40),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           const Text("Bienvenido\na\nHand2Hand",style: TextStyle(fontSize: 30,fontFamily: nunitoBold),textAlign: TextAlign.center,),
           const SizedBox(height: 30,),

@@ -17,6 +17,7 @@ class _RegisterWithNumberScreenState extends State<RegisterWithNumberScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      resizeToAvoidBottomInset: false,   //new line
       body: backgroundImageDark(bodyWidget(), context),
     );
   }

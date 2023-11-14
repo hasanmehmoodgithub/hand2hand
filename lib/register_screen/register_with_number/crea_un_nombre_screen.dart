@@ -17,6 +17,7 @@ class _CreaUnNombreScreenState extends State<CreaUnNombreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,   //new line
       body: Container(
             decoration: imgDecoration,
           child:bodyWidget()),

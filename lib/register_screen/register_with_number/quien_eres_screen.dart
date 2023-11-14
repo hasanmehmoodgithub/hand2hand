@@ -17,7 +17,8 @@ class _QuienEresScreenState extends State<QuienEresScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body:Container(
+        resizeToAvoidBottomInset: false,   //new line
+        body:Container(
         height: double.infinity,
           decoration: imgDecoration,
           child: bodyWidget())

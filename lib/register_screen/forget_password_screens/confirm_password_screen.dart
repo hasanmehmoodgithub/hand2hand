@@ -17,6 +17,7 @@ class _ConfirmPasswordScreenState extends State<ConfirmPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,   //new line
       body: backgroundImageDark(bodyWidget(), context),
     );
   }
