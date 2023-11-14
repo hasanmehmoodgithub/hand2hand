@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../Components/AppComponents.dart';
 import '../../Src/AppColors.dart';
 import '../../Src/AppTextStyle.dart';
+import '../../routes/app_screen.dart';
 
-class RegisterWithEmailScreen extends StatefulWidget {
-  const RegisterWithEmailScreen({super.key});
+class ForgetPasswordScreen extends StatefulWidget {
+  const ForgetPasswordScreen({super.key});
 
   @override
-  State<RegisterWithEmailScreen> createState() => _RegisterWithEmailScreenState();
+  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
 }
 
-class _RegisterWithEmailScreenState extends State<RegisterWithEmailScreen> {
+class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -66,10 +68,14 @@ class _RegisterWithEmailScreenState extends State<RegisterWithEmailScreen> {
   }
 
   forgetText(){
-    return const Row(
+    return  Row(
       children: [
-        Spacer(),
-        Text("< volver",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        const Spacer(),
+        InkWell(
+            onTap: (){
+              context.pop();
+            },
+            child: const Text("< volver",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
       ],
     );
   }
@@ -114,6 +120,7 @@ class _RegisterWithEmailScreenState extends State<RegisterWithEmailScreen> {
             ),
           ),
           onPressed: (){
+            context.push("/${AppScreen.confirmForgetPassword}");
 
           }, child: const Text("Siguiente")),
     );
@@ -146,11 +153,16 @@ class _RegisterWithEmailScreenState extends State<RegisterWithEmailScreen> {
 
 
   bottomText(){
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("¿No tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
-        Text(" Registrate",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        const Text("¿No tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
+        InkWell(
+            onTap: (){
+              context.push("/${AppScreen.registerWithNumberScreen}");
+            },
+            child: const Text(" Registrate",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
+
 
 
       ],

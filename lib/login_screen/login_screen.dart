@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hand2hand/Components/AppComponents.dart';
 import 'package:hand2hand/Src/AppColors.dart';
 import 'package:hand2hand/Src/AppTextStyle.dart';
+
+import '../routes/app_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -71,10 +74,14 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   forgetText(){
-    return const Row(
+    return  Row(
       children: [
-        Spacer(),
-        Text("¿Has olvidado la contraseña?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        const Spacer(),
+        InkWell(
+            onTap: (){
+              context.push("/${AppScreen.forgetPassword}");
+            },
+            child: const Text("¿Has olvidado la contraseña?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
       ],
     );
   }
@@ -146,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           onPressed: (){
-
+            context.push("/${AppScreen.dashboardScreen}");
           }, child: const Text("Entrar")),
     );
   }
@@ -154,22 +161,34 @@ class _LoginScreenState extends State<LoginScreen> {
   otherLoginOptions(){
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/icons/apple.png",height: 14,width: 14,),
-            const SizedBox(width: 10,),
-            const Text("Iniciar con Apple",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),)
-          ],
+        InkWell(
+          onTap: (){
+            context.push("/${AppScreen.loginWithAppleScreen}");
+
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset("assets/icons/apple.png",height: 14,width: 14,),
+              const SizedBox(width: 10,),
+              const Text("Iniciar con Apple",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),)
+            ],
+          ),
         ),
         const SizedBox(height: 5,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/icons/google.png",width: 14,height: 14,),
-            const SizedBox(width: 10,),
-            const Text("Inicio sesion Google",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.orange),)
-          ],
+        InkWell(
+          onTap: (){
+            context.push("/${AppScreen.registerWithNumberScreen}");
+
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset("assets/icons/google.png",width: 14,height: 14,),
+              const SizedBox(width: 10,),
+              const Text("Inicio sesion Google",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.orange),)
+            ],
+          ),
         )
       ],
     );
@@ -177,11 +196,15 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
   bottomText(){
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("¿No tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
-        Text(" Registrate",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        InkWell(
+            onTap: (){
+              context.push("/${AppScreen.registerWithNumberScreen}");
+            },
+            child: Text(" Registrate",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
 
 
       ],

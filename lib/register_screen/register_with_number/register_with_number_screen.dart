@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../Components/AppComponents.dart';
 import '../../Src/AppColors.dart';
 import '../../Src/AppTextStyle.dart';
+import '../../routes/app_screen.dart';
 
 class RegisterWithNumberScreen extends StatefulWidget {
   const RegisterWithNumberScreen({super.key});
@@ -95,6 +97,7 @@ class _RegisterWithNumberScreenState extends State<RegisterWithNumberScreen> {
             ),
           ),
           onPressed: (){
+            context.push("/${AppScreen.quienEresScreen}");
 
           }, child: const Text("Siguiente")),
     );
@@ -102,11 +105,16 @@ class _RegisterWithNumberScreenState extends State<RegisterWithNumberScreen> {
 
 
   bottomText(){
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("¿Ya tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
-        Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        InkWell(
+            onTap: (){
+              context.push("/${AppScreen.loginScreen}");
+
+            },
+            child: Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
 
 
       ],

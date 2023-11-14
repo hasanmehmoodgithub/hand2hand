@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
         const Spacer(),
         Container(
             margin: const EdgeInsets.only(left: 20,right: 20),
-            child: const Text("Hand2Hand",style: TextStyle(color: Colors.white,fontSize:65 ),)),
+            child: const Text("Hand2Hand",style: TextStyle(color: Colors.white,fontSize:60,fontWeight: FontWeight.bold ),)),
         const Spacer(),
         buttonWidgets(),
       ],
@@ -60,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           onPressed: (){
-            context.push("/${AppScreen.dashboardScreen}");
+            context.push("/${AppScreen.loginScreen}");
 
           }, child: const Text("Iniciar sesión")),
     );
@@ -80,7 +80,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           onPressed: (){
-            context.push("/${AppScreen.creaUnNombreScreen}");
+            context.push("/${AppScreen.registerWithNumberScreen}");
 
           }, child: const Text("Crea cuenta")),
     );

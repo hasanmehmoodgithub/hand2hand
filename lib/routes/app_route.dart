@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hand2hand/bottom_bar_screen/dashboard.dart';
 import 'package:hand2hand/login_screen/login_screen.dart';
-import 'package:hand2hand/register_screen/register_with_email/confirm_password_email_register_screen.dart';
+import 'package:hand2hand/login_screen/login_with_apple_screen.dart';
+import 'package:hand2hand/register_screen/forget_password_screens/confirm_password_screen.dart';
 import 'package:hand2hand/register_screen/register_with_number/crea_un_nombre_screen.dart';
 import 'package:hand2hand/register_screen/register_with_number/quien_eres_screen.dart';
 import 'package:hand2hand/register_screen/register_with_number/register_with_number_screen.dart';
-
-
-import '../register_screen/register_with_email/register_with_email_screen.dart';
+import '../register_screen/forget_password_screens/forget_password_screen.dart';
 import '../splash_screen/splash_screen.dart';
 import 'app_screen.dart';
 
@@ -35,6 +34,13 @@ class AppRoutes {
               return  LoginScreen();
             }),
 
+        GoRoute(
+            name: AppScreen.loginWithAppleScreen,
+            path: "/${AppScreen.loginWithAppleScreen}",
+            builder: (BuildContext context, GoRouterState state) {
+              return  LoginWithAppleScreen();
+            }),
+
 
         GoRoute(
             name: AppScreen.dashboardScreen,
@@ -43,16 +49,16 @@ class AppRoutes {
               return  DashboardScreen();
             }),
         GoRoute(
-            name: AppScreen.confirmPasswordEmailRegisterScreen,
-            path: "/${AppScreen.confirmPasswordEmailRegisterScreen}",
+            name: AppScreen.confirmForgetPassword,
+            path: "/${AppScreen.confirmForgetPassword}",
             builder: (BuildContext context, GoRouterState state) {
-              return  ConfirmPasswordEmailRegisterScreen();
+              return  ConfirmPasswordScreen();
             }),
         GoRoute(
-            name: AppScreen.registerWithEmail,
-            path: "/${AppScreen.registerWithEmail}",
+            name: AppScreen.forgetPassword,
+            path: "/${AppScreen.forgetPassword}",
             builder: (BuildContext context, GoRouterState state) {
-              return  RegisterWithEmailScreen();
+              return  ForgetPasswordScreen();
             }),
         GoRoute(
             name: AppScreen.creaUnNombreScreen,

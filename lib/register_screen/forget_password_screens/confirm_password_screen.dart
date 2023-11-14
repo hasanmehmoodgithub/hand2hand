@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../Components/AppComponents.dart';
 import '../../Src/AppColors.dart';
 import '../../Src/AppTextStyle.dart';
+import '../../routes/app_screen.dart';
 
-class ConfirmPasswordEmailRegisterScreen extends StatefulWidget {
-  const ConfirmPasswordEmailRegisterScreen({super.key});
+class ConfirmPasswordScreen extends StatefulWidget {
+  const ConfirmPasswordScreen({super.key});
 
   @override
-  State<ConfirmPasswordEmailRegisterScreen> createState() => _ConfirmPasswordEmailRegisterScreenState();
+  State<ConfirmPasswordScreen> createState() => _ConfirmPasswordScreenState();
 }
 
-class _ConfirmPasswordEmailRegisterScreenState extends State<ConfirmPasswordEmailRegisterScreen> {
+class _ConfirmPasswordScreenState extends State<ConfirmPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,11 +75,15 @@ class _ConfirmPasswordEmailRegisterScreenState extends State<ConfirmPasswordEmai
   }
 
   forgetText() {
-    return const Row(
+    return  Row(
       children: [
-        Spacer(),
-        Text("< volver", style: TextStyle(
-            fontSize: 14, fontFamily: nunitoBold, color: mainColor),)
+        const Spacer(),
+        InkWell(
+            onTap: (){
+              context.pop();
+            },
+            child: const Text("< volver",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
+
       ],
     );
   }
@@ -185,13 +191,18 @@ class _ConfirmPasswordEmailRegisterScreenState extends State<ConfirmPasswordEmai
 
 
   bottomText() {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("¿No tienes cuenta?", style: TextStyle(
             fontSize: 14, fontFamily: nunitoBold, color: Colors.white),),
-        Text("Registrate", style: TextStyle(
-            fontSize: 14, fontFamily: nunitoBold, color: mainColor),)
+        InkWell(
+            onTap: (){
+              context.push("/${AppScreen.registerWithNumberScreen}");
+            },
+            child: Text(" Registrate",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
+
+
 
 
       ],

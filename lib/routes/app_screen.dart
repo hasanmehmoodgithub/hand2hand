@@ -3,8 +3,10 @@ abstract class AppScreen{
   static const dashboardScreen="dashboardScreen";
 
   static const loginScreen="loginScreen";
-  static const confirmPasswordEmailRegisterScreen="confirmPasswordEmailRegisterScreen";
-  static const registerWithEmail="registerWithEmail.dart";
+  static const loginWithAppleScreen="loginWithAppleScreen";
+
+  static const confirmForgetPassword="confirmForgetPassword";
+  static const forgetPassword="forgetPassword";
 
   static const creaUnNombreScreen="creaUnNombreScreen";
 

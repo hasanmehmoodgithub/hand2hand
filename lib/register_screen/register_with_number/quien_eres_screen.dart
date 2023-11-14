@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../Components/AppComponents.dart';
 import '../../Src/AppColors.dart';
 import '../../Src/AppTextStyle.dart';
+import '../../routes/app_screen.dart';
 
 class QuienEresScreen extends StatefulWidget {
   const QuienEresScreen({super.key});
@@ -24,19 +26,16 @@ class _QuienEresScreenState extends State<QuienEresScreen> {
 
   Widget bodyWidget(){
     return Container(
-
+   //   height: MediaQuery.of(context).size.height,
         padding: const EdgeInsets.all(20),
-        child: SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(),
-          child: Column(
-            children: [
-              const SizedBox(height: 20,),
-              fieldsContainer(),
-
-              bottomText(),
-              const SizedBox(height: 10,),
-            ],
-          ),
+        child: Column(
+          children: [
+            const SizedBox(height: 20,),
+            fieldsContainer(),
+            Spacer(),
+            bottomText(),
+            const SizedBox(height: 10,),
+          ],
         ));
   }
 
@@ -83,10 +82,15 @@ class _QuienEresScreenState extends State<QuienEresScreen> {
   }
 
   forgetText(){
-    return const Row(
+    return  Row(
       children: [
-        Spacer(),
-        Text("< volver",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        const Spacer(),
+        InkWell(
+            onTap: (){
+              context.pop();
+            },
+            child: const Text("< volver",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
+
       ],
     );
   }
@@ -208,6 +212,7 @@ class _QuienEresScreenState extends State<QuienEresScreen> {
             ),
           ),
           onPressed: (){
+            context.push("/${AppScreen.creaUnNombreScreen}");
 
           }, child: const Text("Siguiente")),
     );
@@ -215,11 +220,16 @@ class _QuienEresScreenState extends State<QuienEresScreen> {
 
 
   bottomText(){
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("¿Ya tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
-        Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        const Text("¿Ya tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
+        InkWell(
+            onTap: (){
+              context.push("/${AppScreen.loginScreen}");
+
+            },
+            child: const Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
 
 
       ],

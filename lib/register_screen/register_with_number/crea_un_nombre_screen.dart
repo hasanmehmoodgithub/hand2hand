@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hand2hand/Components/AppComponents.dart';
 
 import '../../Src/AppColors.dart';
 import '../../Src/AppTextStyle.dart';
+import '../../routes/app_screen.dart';
 
 class CreaUnNombreScreen extends StatefulWidget {
   const CreaUnNombreScreen({super.key});
@@ -76,10 +78,14 @@ class _CreaUnNombreScreenState extends State<CreaUnNombreScreen> {
   }
 
   forgetText(){
-    return const Row(
+    return  Row(
       children: [
-        Spacer(),
-        Text("< volver",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        const Spacer(),
+        InkWell(
+            onTap: (){
+              context.pop();
+            },
+            child: const Text("< volver",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
       ],
     );
   }
@@ -225,6 +231,7 @@ class _CreaUnNombreScreenState extends State<CreaUnNombreScreen> {
             ),
           ),
           onPressed: (){
+            context.push("/${AppScreen.dashboardScreen}");
 
           }, child: const Text("Siguiente")),
     );
@@ -232,11 +239,16 @@ class _CreaUnNombreScreenState extends State<CreaUnNombreScreen> {
 
 
   bottomText(){
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("¿Ya tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
-        Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),)
+        const Text("¿Ya tienes cuenta?",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),),
+        InkWell(
+            onTap: (){
+              context.push("/${AppScreen.loginScreen}");
+
+            },
+            child: const Text(" Inicia sesión",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: mainColor),))
 
 
       ],
