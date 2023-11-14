@@ -130,13 +130,18 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   otherLoginOptions(){
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/icons/apple.png",height: 14,width: 14,),
-            const SizedBox(width: 10,),
-            const Text("Iniciar con Apple",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),)
-          ],
+        InkWell(
+          onTap: (){
+            context.push("/${AppScreen.loginWithAppleScreen}");
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset("assets/icons/apple.png",height: 14,width: 14,),
+              const SizedBox(width: 10,),
+              const Text("Iniciar con Apple",style: TextStyle(fontSize: 14,fontFamily: nunitoBold,color: Colors.white),)
+            ],
+          ),
         ),
         const SizedBox(height: 5,),
 
